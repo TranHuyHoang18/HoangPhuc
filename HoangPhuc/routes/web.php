@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'filemanager', 'middleware' => ['auth:admin']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 
 Route::prefix('admin')->group(function() {
     // Login Logout Tai khoan
@@ -32,6 +35,7 @@ Route::prefix('admin')->group(function() {
     Route::post('/login', 'Admin\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/logout/', 'Admin\AdminLoginController@logout')->name('admin.logout');
     Route::post('/logout', 'Admin\AdminLoginController@logout')->name('admin.auth.logout');
+
     // quan tri danh muc
     Route::prefix('danh-muc')->group(function() {
         Route::get('/', 'Admin\CategoryController@index')->name('admin.category.index');
@@ -39,5 +43,10 @@ Route::prefix('admin')->group(function() {
         Route::get('/edit/{id}', 'Admin\CategoryController@edit')->name('admin.danhmuc.edit');
         Route::post('/edit/{id}', 'Admin\CategoryController@update')->name('admin.danhmuc..update');
         Route::get('/delete/{id}', 'Admin\CategoryController@destroy')->name('admin.danhmuc.delete');
+    });
+
+    // quan tri media
+    Route::group(['prefix'=>'media'],function() {
+        Route::get('/', 'Admin\MediaController@index')->name('admin.media.index');
     });
 });

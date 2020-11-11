@@ -38,6 +38,22 @@
                 </div>
             </a>
         </li>
+        <li class="asideLeft__li ">
+            <a href="{{'admin/media'}}" class="asideLeft__link">
+                <div class="asideLeft__Itemmenu">
+                    <div class="uk-flex-middle uk-grid-small" uk-grid>
+                        <div class="uk-width-auto">
+                            <div class="asideLeft__Icon">
+                                <i class="fa fa-picture-o uk-responsive-height" aria-hidden="true" style="margin-right: 10px;color: #FBB03B;font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="uk-width-expand">
+                            <span class="asideLeft__txt1">Media</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
         <li class="asideLeft__li uk-parent">
             <a href="#" class="asideLeft__link">
                 <div class="asideLeft__Itemmenu">
