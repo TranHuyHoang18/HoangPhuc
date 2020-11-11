@@ -32,5 +32,12 @@ Route::prefix('admin')->group(function() {
     Route::post('/login', 'Admin\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/logout/', 'Admin\AdminLoginController@logout')->name('admin.logout');
     Route::post('/logout', 'Admin\AdminLoginController@logout')->name('admin.auth.logout');
-
+    // quan tri danh muc
+    Route::prefix('danh-muc')->group(function() {
+        Route::get('/', 'Admin\CategoryController@index')->name('admin.category.index');
+        Route::post('/store', 'Admin\CategoryController@store')->name('admin.category.store');
+        Route::get('/edit/{id}', 'Admin\CategoryController@edit')->name('admin.danhmuc.edit');
+        Route::post('/edit/{id}', 'Admin\CategoryController@update')->name('admin.danhmuc..update');
+        Route::get('/delete/{id}', 'Admin\CategoryController@destroy')->name('admin.danhmuc.delete');
+    });
 });

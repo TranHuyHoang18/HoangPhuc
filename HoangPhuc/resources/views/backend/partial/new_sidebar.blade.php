@@ -21,8 +21,9 @@
                 </div>
             </a>
         </li>
-        <li class="asideLeft__li uk-parent">
-            <a href="#" class="asideLeft__link">
+
+        <li class="asideLeft__li ">
+            <a href="{{'admin/danh-muc'}}" class="asideLeft__link">
                 <div class="asideLeft__Itemmenu">
                     <div class="uk-flex-middle uk-grid-small" uk-grid>
                         <div class="uk-width-auto">
@@ -36,20 +37,6 @@
                     </div>
                 </div>
             </a>
-            <ul class="uk-nav-sub asideLeft__sub">
-                <li style="width: 90%;margin-left: 5%;">
-                    <a href="{{url('admin/danh-muc/dich-vu')}}" >Dịch Vụ</a>
-                </li>
-                <li style="width: 90%;margin-left: 5%;">
-                    <a href="{{url('admin/danh-muc/gia-cuoc')}}" >Giá Cước</a>
-                </li>
-                <li style="width: 90%;margin-left: 5%;">
-                    <a href="{{url('admin/danh-muc/tin-tuc')}}" >Tin Tức</a>
-                </li>
-                <li style="width: 90%;margin-left: 5%;">
-                    <a href="{{url('admin/danh-muc/tuyen-dung')}}" >Tuyển Dụng</a>
-                </li>
-            </ul>
         </li>
         <li class="asideLeft__li uk-parent">
             <a href="#" class="asideLeft__link">

@@ -17,7 +17,7 @@
                         <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
                             <div class="uk-navbar-left">
                                 <a href="{{url('/admin')}}" class="uk-navbar-item uk-logo asideLeft__logo">
-                                    <img class="uk-responsive-width uk-responsive-height" src="{{asset('backend/images/image.png')}}" alt=""></a>
+                                    <img class="uk-responsive-width uk-responsive-height" src="{{asset('images/logo/logo.jpg')}}" alt=""></a>
                             </div>
                         </div>
                         <ul class="uk-nav-default uk-nav-parent-icon asideLeft__nav" uk-nav>
