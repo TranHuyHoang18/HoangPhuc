@@ -62,7 +62,19 @@
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Icon</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input"  name="icon" type="text" value=""  style="background: #e6e3e3" required="">
+                                <div class="uk-form-controls">
+                                 <span class="input-group-btn">
+                                    <a id="lfm" data-input="thumbnail" data-preview="hhh"
+                                       class="lfm-btn btn btn-primary">
+                                        <i class="fa fa-picture-o"></i> Choose
+                                    </a>
+                                    <a class="btn btn-warning remove-image" >
+                                        <i class="fa fa-remove"></i> Xóa
+                                    </a>
+                                </span>
+                                    <input id="thumbnail" class="uk-input" type="text" name="icon" style="background: #e6e3e3" value="">
+                                    <span id="hhh" style="max-height:60px;margin-top: 10px"></span>
+                                </div>
                             </div>
                         </div>
 
@@ -146,16 +158,16 @@
                     @foreach($categories as $category)
                         <?php $i++; ?>
                         <tr>
-                            <td>{{$i}}</td>
-                            <td class="uk-text-left">
+                            <td class="uk-text-center uk-text-middle">{{$i}}</td>
+                            <td class="uk-text-left uk-text-middle">
                                 <?php
                                 for($tk = 1; $tk <=$category->level*4;$tk++)
                                     echo"_";
                                 ?>
                                 {{$category->name}}
                             </td>
-                            <td class="uk-text-left"> {{$category->icon}}</td>
-                            <td>
+                            <td class="uk-text-center uk-text-middle"><img src="{{asset($category->icon)}}" style="max-height:50px;"></td>
+                            <td class="uk-text-center uk-text-middle">
                                 <a href="{{url('admin/danh-muc/edit/'.$category->id)}}" ><button class="btn btn-success">Sửa</button></a>
                                 <a href="{{url('admin/danh-muc/delete/'.$category->id)}}" onclick="return confirm('Bạn chắc chắn muốn xóa danh mục? ')"><button class="btn btn-danger">Xóa</button></a>
                             </td>
@@ -166,22 +178,28 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+
+        let route_prefix = "{{url('/filemanager')}}";
+        $('.lfm-btn').filemanager('image', {prefix: route_prefix});
+
+    </script>
+    <script type="text/javascript">
+        function openId(id)
+        {
+            document.getElementById(id).style.display="inline";
+            document.getElementById('btn-add').style.display="none";
+            document.getElementById('btn-cancel').style.display="inline";
+        }
+        function CloseId(id)
+        {
+            document.getElementById(id).style.display="none";
+            document.getElementById('btn-add').style.display="inline";
+            document.getElementById('btn-cancel').style.display="none";
+        }
+    </script>
 @endsection
 
-<script type="text/javascript">
-    function openId(id)
-    {
-        document.getElementById(id).style.display="inline";
-        document.getElementById('btn-add').style.display="none";
-        document.getElementById('btn-cancel').style.display="inline";
-    }
-    function CloseId(id)
-    {
-        document.getElementById(id).style.display="none";
-        document.getElementById('btn-add').style.display="inline";
-        document.getElementById('btn-cancel').style.display="none";
-    }
-</script>
 
 
 

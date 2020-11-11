@@ -62,14 +62,24 @@
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Icon</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input"  name="icon" type="text"  style="background: #e6e3e3" required="" value="{{$item->icon}}">
+                                 <span class="input-group-btn">
+                                    <a id="lfm" data-input="thumbnail" data-preview="hhh"
+                                       class="lfm-btn btn btn-primary">
+                                        <i class="fa fa-picture-o"></i> Choose
+                                    </a>
+                                    <a class="btn btn-warning remove-image" >
+                                        <i class="fa fa-remove"></i> Xóa
+                                    </a>
+                                </span>
+                                <input id="thumbnail" class="uk-input" type="text" name="icon" style="background: #e6e3e3" value="{{ $item->icon}}">
+                                <span id="hhh" style="max-height:60px;"> <img src="{{asset($item->icon)}}" style="margin-top:10px;max-height:60px;"></span>
                             </div>
                         </div>
 
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Thông tin</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input"  name="intro" type="text"  style="background: #e6e3e3" required="" value="{{$item->intro}}">
+                                <textarea type="text" name="intro" class="uk-input" required="" style="background: #e6e3e3;height: 80px">{{$item->intro}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -97,7 +107,7 @@
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Descriptions</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" name="seo_desc" type="text"  style="background: #e6e3e3" required="" value="{{$item->seo_desc}}">
+                                <textarea type="text" name="seo_desc" class="uk-input" required="" style="background: #e6e3e3;height: 80px">{{$item->seo_desc}}</textarea>
                             </div>
                         </div>
                         <div style="margin-top: 20px">
@@ -111,4 +121,10 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+
+        let route_prefix = "{{url('/filemanager')}}";
+        $('.lfm-btn').filemanager('image', {prefix: route_prefix});
+
+    </script>
 @endsection
