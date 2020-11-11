@@ -23,7 +23,7 @@
         </li>
 
         <li class="asideLeft__li ">
-            <a href="{{'admin/danh-muc'}}" class="asideLeft__link">
+            <a href="{{url('admin/danh-muc')}}" class="asideLeft__link">
                 <div class="asideLeft__Itemmenu">
                     <div class="uk-flex-middle uk-grid-small" uk-grid>
                         <div class="uk-width-auto">
@@ -39,7 +39,7 @@
             </a>
         </li>
         <li class="asideLeft__li ">
-            <a href="{{'admin/media'}}" class="asideLeft__link">
+            <a href="{{url('admin/media')}}" class="asideLeft__link">
                 <div class="asideLeft__Itemmenu">
                     <div class="uk-flex-middle uk-grid-small" uk-grid>
                         <div class="uk-width-auto">

@@ -69,7 +69,7 @@
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Thông tin</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input"  name="intro" type="text"  style="background: #e6e3e3" required="">
+                                 <textarea type="text" name="intro" class="uk-input" required="" style="background: #e6e3e3;height: 80px">Viết bài </textarea>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                         <div style="margin-top: 20px">
                             <label class="uk-form-label uk-text-large" for="form-stacked-text" style="font-size: large">Descriptions</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" name="seo_desc" type="text"  style="background: #e6e3e3" required="">
+                                <textarea type="text" name="seo_desc" class="uk-input" required="" style="background: #e6e3e3;height: 80px">Descriptions</textarea>
                             </div>
                         </div>
                         <div style="margin-top: 20px">
