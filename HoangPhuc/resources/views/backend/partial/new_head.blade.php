@@ -23,10 +23,10 @@
 
 
 <!-- laravel-filemanager-->
-{{--<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script src='{{asset('backend/js/jquery-2.2.3.min.js')}}'></script>
 <script  src="{{asset('vendor/laravel-filemanager/js/stand-alone-button.js')}}"></script>
-<script>
+{{--<script>
     var editor_config = {
         path_absolute : "{{url('/')}}",
         selector: "textarea.mytinymce",
