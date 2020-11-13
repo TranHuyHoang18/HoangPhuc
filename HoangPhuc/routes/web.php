@@ -49,4 +49,13 @@ Route::prefix('admin')->group(function() {
     Route::group(['prefix'=>'media'],function() {
         Route::get('/', 'Admin\MediaController@index')->name('admin.media.index');
     });
+
+    // quan tri danh muc
+    Route::prefix('san-pham')->group(function() {
+        Route::get('/', 'Admin\ProductController@index')->name('admin.product.index');
+        Route::post('/store', 'Admin\ProductController@store')->name('admin.product.store');
+        Route::get('/edit/{id}', 'Admin\ProductController@edit')->name('admin.product.edit');
+        Route::post('/edit/{id}', 'Admin\ProductController@update')->name('admin.product.update');
+        Route::get('/delete/{id}', 'Admin\ProductController@destroy')->name('admin.product.delete');
+    });
 });

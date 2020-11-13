@@ -13,7 +13,8 @@ class CategoryController extends Controller
         $this->middleware('auth:admin');
     }
     public function index(){
-        $data['categories'] =DB::table('categories')->paginate(40);
+        $data['categories'] =DB::table('categories')
+            ->paginate(40);
         return view('backend.content.category.index',$data);
     }
     public function slugify($str) {
