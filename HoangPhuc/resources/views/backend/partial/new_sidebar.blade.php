@@ -39,6 +39,23 @@
             </a>
         </li>
         <li class="asideLeft__li ">
+            <a href="{{url('admin/san-pham')}}" class="asideLeft__link">
+                <div class="asideLeft__Itemmenu">
+                    <div class="uk-flex-middle uk-grid-small" uk-grid>
+                        <div class="uk-width-auto">
+                            <div class="asideLeft__Icon">
+                                <i class="fa fa-cubes uk-responsive-height" aria-hidden="true" style="color: #FBB03B;font-size: 25px"></i>
+                            </div>
+                        </div>
+                        <div class="uk-width-expand">
+                            <span class="asideLeft__txt1">Sản Phẩm</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li class="asideLeft__li ">
             <a href="{{url('admin/media')}}" class="asideLeft__link">
                 <div class="asideLeft__Itemmenu">
                     <div class="uk-flex-middle uk-grid-small" uk-grid>

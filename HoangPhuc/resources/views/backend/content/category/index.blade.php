@@ -130,7 +130,7 @@
                 <div>
                     <div class="uk-grid-small uk-flex-middle" uk-grid>
                         <div class="uk-width-expand">
-                            <span class="cardBox__header__txt uk-text-uppercase uk-text-large" style="font-size: large">Danh mục trang Tin Tức</span>
+                            <span class="cardBox__header__txt uk-text-uppercase uk-text-large" style="font-size: large">Danh mục của trang Web</span>
                         </div>
                     </div>
                 </div>
